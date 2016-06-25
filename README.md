@@ -45,7 +45,10 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/x6Xcsfx.gif' src2='https://i.imgur.com/DUd5Z1q.gif' src3='https://i.imgur.com/FZFPSTC.gif' src4='https://i.imgur.com/WOANsE9.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/x6Xcsfx.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src2='https://i.imgur.com/DUd5Z1q.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src3='https://i.imgur.com/FZFPSTC.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src4='https://i.imgur.com/WOANsE9.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -63,7 +66,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2016] [Mazen Raafat Ibrahim]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
