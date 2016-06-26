@@ -3,7 +3,7 @@
 //  Insta
 //
 //  Created by Mazen Raafat Ibrahim on 6/18/16.
-//  Copyright © 2016 Mazen & Andres. All rights reserved.
+//  Copyright © 2016 Mazen. All rights reserved.
 //
 
 import UIKit
@@ -25,6 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://sheltered-dusk-13523.herokuapp.com/parse"
             })
         )
+        
+        if PFUser.currentUser() != nil {
+            if let window = window {
+                self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+                var storyboard = UIStoryboard(name: "Main", bundle: nil)
+                var initialViewController = storyboard.instantiateViewControllerWithIdentifier("tabBarView") as! UIViewController
+
+                self.window?.rootViewController = initialViewController
+                self.window?.makeKeyAndVisible()
+            }
+            print(PFUser.currentUser())
+            print("supposed to be nil")
+        }
         
         return true
     }

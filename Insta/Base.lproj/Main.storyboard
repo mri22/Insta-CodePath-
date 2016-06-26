@@ -163,34 +163,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No. of Posts:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOi-hW-vbP">
-                                <rect key="frame" x="20" y="401" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No. of posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSP-s9-Hdh">
-                                <rect key="frame" x="124" y="393" width="176" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mnv-af-nn4" customClass="PFImageView">
                                 <rect key="frame" x="10" y="64" width="300" height="216"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zew-J3-pYm">
+                                <rect key="frame" x="10" y="480" width="55" height="30"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="onLogOut:" destination="RkL-QP-e4o" eventType="touchUpInside" id="eot-61-Jpz"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="HcI-Mp-jPB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Kyq-vI-88M">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="RBC-3b-1rA">
-                            <color key="tintColor" red="0.39821253270000001" green="0.01504856915" blue="0.016885374169999998" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="onLogOut:" destination="RkL-QP-e4o" id="ovD-aI-USZ"/>
-                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="logOutSegue" id="kUc-8n-VTd"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="7hx-lK-78n">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Oz-5T-nqP">
                                 <rect key="frame" x="237" y="7" width="67" height="30"/>
@@ -205,7 +194,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="numberOfPostsTextLabel" destination="VSP-s9-Hdh" id="wiR-Vb-gxT"/>
                         <outlet property="profileImageView" destination="mnv-af-nn4" id="xGB-0k-iGF"/>
                         <outlet property="usernameTextLabel" destination="WeO-4f-JSE" id="BBp-OT-hpl"/>
                     </connections>
@@ -323,7 +311,7 @@
         <!--Instagram-->
         <scene sceneID="ncM-Ou-htl">
             <objects>
-                <viewController id="5U4-ne-7mF" customClass="HomeViewController" customModule="Insta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="homeView" storyboardIdentifier="homeView" id="5U4-ne-7mF" customClass="HomeViewController" customModule="Insta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="78a-ZH-0Uh"/>
                         <viewControllerLayoutGuide type="bottom" id="ldx-rK-tc0"/>
@@ -444,12 +432,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TF-qO-wt1">
-                                <rect key="frame" x="6" y="490" width="129" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zb-Cx-Dd4">
                                 <rect key="frame" x="116" y="412" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -462,7 +444,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="commentLabel" destination="bsT-GB-pby" id="B4t-5x-nLx"/>
-                        <outlet property="dateLabel" destination="7TF-qO-wt1" id="9cd-0c-20n"/>
                         <outlet property="postImageView" destination="mAI-76-Lno" id="xvk-Go-RHy"/>
                         <outlet property="timestampLabel" destination="6Zb-Cx-Dd4" id="Nm8-lf-6vh"/>
                     </connections>
@@ -474,7 +455,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="6NT-5X-Zg7">
             <objects>
-                <tabBarController id="lJc-0Z-8c3" customClass="tabBarViewController" customModule="Insta" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="tabBarView" storyboardIdentifier="tabBarView" id="lJc-0Z-8c3" customClass="tabBarViewController" customModule="Insta" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="f9N-S4-OK9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -540,6 +521,6 @@
         <image name="prof" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bHd-0d-K3a"/>
+        <segue reference="Ben-aL-nYZ"/>
     </inferredMetricsTieBreakers>
 </document>
