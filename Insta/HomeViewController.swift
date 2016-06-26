@@ -104,12 +104,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     cell.profileImageView.file = parsedImageUser
                     
                 }
-                
-                print(user)
-                print(post["username"].description)
-                print(user["username"].description)
-                print("\(self.postsUser!.count)")
-                print("yoooooooooo")
             }
         }
         
